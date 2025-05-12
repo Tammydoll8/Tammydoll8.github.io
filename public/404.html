@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    // Capture the original path and redirect to index.html with it as a query parameter
+    var path = window.location.pathname;
+    // Remove leading slash if present to avoid double slashes
+    path = path.replace(/^\//, '');
+    // Only redirect if this isn't already the root path
+    if (path && !path.startsWith('index.html')) {
+      window.location.replace('/?/' + path + window.location.search + window.location.hash);
+    }
+  </script>
+</head>
+<body>
+</body>
+</html>
